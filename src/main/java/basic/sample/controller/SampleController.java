@@ -1,4 +1,4 @@
-package basic.controller;
+package basic.sample.controller;
 
 import java.util.List;
 import java.util.Map;

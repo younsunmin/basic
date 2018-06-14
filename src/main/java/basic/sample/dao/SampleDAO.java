@@ -1,4 +1,4 @@
-package basic.common.dao;
+package basic.sample.dao;
 
 import java.util.List;
 import java.util.Map;

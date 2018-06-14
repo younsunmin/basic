@@ -13,6 +13,7 @@ import basic.common.dao.CommonDAO;
 @Service("commonService")
 public class CommonServiceImp implements CommonService{
 	Logger log = LoggerFactory.getLogger(this.getClass());
+	
     @Resource(name="commonDAO")
     private CommonDAO commonDAO;
     

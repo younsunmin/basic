@@ -12,7 +12,7 @@ function gfn_isNull(str) {
 function ComSubmit(opt_formId) {
     this.formId = gfn_isNull(opt_formId) == true ? "commonForm" : opt_formId;
     this.url = "";
-     
+    
     if(this.formId == "commonForm"){
         $("#commonForm")[0].reset();
     }
@@ -30,5 +30,12 @@ function ComSubmit(opt_formId) {
         frm.action = this.url;
         frm.method = "post";
         frm.submit();  
+    };
+    
+    this.delParam = function delParam(){
+    	var del = document.getElementById(this.formId);
+        while(del.firstChild) {
+        	del.removeChild(del.firstChild);
+        }
     };
 }

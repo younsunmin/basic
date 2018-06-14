@@ -35,13 +35,18 @@
             </tr>
             <tr>
                 <th scope="row">첨부파일</th>
+                
                 <td colspan="3">
-                    <c:forEach var="row" items="${list }">
-                        <input type="hidden" id="IDX" value="${row.IDX }">
+                	<c:forEach var="row" items="${list }">
+                	<p>
+                	    <input type="hidden" id="IDX" value="${row.IDX }">
                         <a href="#this" name="file">${row.ORIGINAL_FILE_NAME }</a>
                         (${row.FILE_SIZE }kb)
-                    </c:forEach>
+                        
+                        </p>
+                    </c:forEach>                    
                 </td>
+                
             </tr>
         </tbody>
     </table>
@@ -87,9 +92,11 @@
 	    function fn_downloadFile(obj){
 	        var idx = obj.parent().find("#IDX").val();
 	        var comSubmit = new ComSubmit();
+	        
 	        comSubmit.setUrl("<c:url value='/common/downloadFile.do' />");
 	        comSubmit.addParam("IDX", idx);
 	        comSubmit.submit();
+	        comSubmit.delParam();
 	    }
 	</script>
 </body>

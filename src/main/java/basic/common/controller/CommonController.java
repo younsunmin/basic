@@ -27,7 +27,7 @@ public class CommonController {
         Map<String,Object> map = commonService.selectFileInfo(commandMap.getMap());
         String storedFileName = (String)map.get("STORED_FILE_NAME");
         String originalFileName = (String)map.get("ORIGINAL_FILE_NAME");
-         
+        
         byte fileByte[] = FileUtils.readFileToByteArray(new File("C:\\dev\\file\\"+storedFileName));
          
         response.setContentType("application/octet-stream");

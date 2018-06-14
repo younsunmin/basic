@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import basic.common.dao.SampleDAO;
+import basic.sample.dao.SampleDAO;
 import basic.common.util.FileUtils;
 
 @Service("sampleService")
